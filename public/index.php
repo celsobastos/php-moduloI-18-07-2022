@@ -18,7 +18,7 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation-->
+        <!-- Navigation menu-->
         <?php include 'nav.php' ?>
         <header class="masthead">
             <div class="container px-5">
