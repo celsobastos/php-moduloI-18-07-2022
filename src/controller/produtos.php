@@ -1,9 +1,9 @@
-<?php include __DIR__ . '/../view/header.php'; ?>
+<?php
 
-<section>
-    <div class="container">
-        Lista de Produtos
-    </div>
-</section>
+require 'renderHTML.php';
 
-<?php include __DIR__ . '/../view/footer.php'; ?>
+$data = [
+    '#title' => 'Lista de Produtos',
+];
+
+render($data, $file);

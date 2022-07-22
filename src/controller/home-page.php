@@ -3,8 +3,7 @@
 require 'renderHTML.php';
 
 $data = [
-    '#title' => 'Home Page test',
+    '#title' => 'Home Page',
 ];
 
 render($data, $file);
-
