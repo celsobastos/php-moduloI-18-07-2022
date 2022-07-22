@@ -4,6 +4,7 @@ $rotas = [
     '/produtos' => 'produtos',
     '/cadastro' => 'cadastro-produtos',
     '/valida-form' => 'valida-form',
+    '/home' => 'home-page',
 ];
 
 /**
@@ -16,7 +17,8 @@ $rotas = [
  */
 $renderHtml = function (string $rota) use ($rotas) : void {
    if(array_key_exists($rota, $rotas)) {
-    require __DIR__ . '/../src/controller/' .  $rotas[$rota] . '.php';
+    $file = $rotas[$rota];
+    require __DIR__ . '/../src/controller/' . $file . '.php';
     exit;
    }
    require __DIR__ . '/../src/controller/404.php';

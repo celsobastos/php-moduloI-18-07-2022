@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__ . '/../rotas/rotas.php';
-$rota = $_SERVER['PATH_INFO'];
+$rota = $_SERVER['PATH_INFO'] ?? '/home';
 
 // if (!array_key_exists($rota, $rotas)) {
 //     http_response_code(404);
