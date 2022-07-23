@@ -4,6 +4,10 @@
     <div class="container">
         <h1 class="alert text-center">
             <?php echo $data['#title']; ?>
+            
+            <!-- Imprimir os produtos -->
+            <?php echo $data['#produtos']; ?>
+            
         </h1>
         <div>
             <a href="/cadastro" class="btn btn-primary">Cadastro</a>

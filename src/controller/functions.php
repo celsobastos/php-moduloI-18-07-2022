@@ -12,3 +12,5 @@ function validaQuantidadeCaracteres(
 
     return true;
 }
+
+/** Criar função para salvar dados em arquivo */
