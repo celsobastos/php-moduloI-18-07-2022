@@ -6,6 +6,13 @@
             <h1 class="alert text-center">
                 <?php echo $data['#title']; ?>
             </h1>
+
+            <?php if($data['#erro'] === '0'): ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= $data['#mensagem']; ?>
+                </div>
+            <?php endif; ?>
+
             <form id="contactForm" action="/valida-form" method="POST">
                 <div class="form-floating mb-3">
                     <input name="produto" class="form-control" id="produto" type="text" />
