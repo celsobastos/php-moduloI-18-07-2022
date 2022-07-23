@@ -2,9 +2,12 @@
 
 <section>
     <div class="container">
-    <h1 class="alert text-center">
+        <h1 class="alert text-center">
             <?php echo $data['#title']; ?>
-    </h1>
+        </h1>
+        <div>
+            <a href="/cadastro" class="btn btn-primary">Cadastro</a>
+        </div>
     </div>
 </section>
 

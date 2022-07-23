@@ -3,9 +3,7 @@
 <section>
     <div class="container">
         <h1 class="alert text-center">
-
             <?php echo $data['#title']; ?>
-
         </h1>
     </div>
 </section>
