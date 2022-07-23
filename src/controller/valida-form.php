@@ -1,17 +1,12 @@
 <?php
 
 $produto = $_POST['produto'];
+$filtro = filter_var($produto, FILTER_SANITIZE_SPECIAL_CHARS);
 
-//$filtro = filter_var($produto, FILTER_SANITIZE_SPECIAL_CHARS);
-//$filter_string = filter_var($produto, FILTER_SANITIZE_NUMBER_INT);
+$file = 'produtos.txt';
+$test = file_put_contents($file, $filtro, FILE_IGNORE_NEW_LINES | LOCK_EX);
 
-$filter = filter_var($produto, FILTER_VALIDATE_EMAIL);
-
-if ($filter) {
-    echo 'Email Valido';
-}
-else {
-    echo 'email não existe';
-}
+echo '<pre>';
 
 
+//header('location: /produtos');
