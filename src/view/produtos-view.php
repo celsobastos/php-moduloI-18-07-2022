@@ -6,7 +6,12 @@
             <?php echo $data['#title']; ?>
             
             <!-- Imprimir os produtos -->
-            <?php echo $data['#produtos']; ?>
+            
+            <?php foreach($data['#produtos'] as $valor): ?>
+                <div>
+                    <?= $valor; ?>
+                </div>    
+            <?php endforeach; ?>
             
         </h1>
         <div>

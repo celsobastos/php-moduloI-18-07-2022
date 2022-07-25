@@ -11,4 +11,8 @@ $data = [
     '#produtos' => $lista_produtos,
 ];
 
+// foreach($lista_produtos as $valor) {
+//     echo $valor;
+// }
+
 render($data, $file);
