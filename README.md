@@ -23,3 +23,6 @@
     print_r($pessoas);
     exit;
 ?>
+
+## Test de expressa regular
+- https://regexr.com/
