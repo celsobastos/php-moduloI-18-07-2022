@@ -1,15 +1,7 @@
 <?php
 require 'conexao.php';
-$sql = "SELECT COUNT(*) as contagem FROM alunos;";
+$sql = "SELECT * FROM alunos;";
 $result = mysqli_query($connect, $sql);
-
-$test = mysqli_fetch_column($result);
-
-echo '<pre>';
-print_r($test);
-exit;
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
