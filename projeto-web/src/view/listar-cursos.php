@@ -1,5 +1,7 @@
 <?php include 'header.php' ?>
 <ul class="list-group">
+
+    
     <?php foreach($data as $curso): ?>
         <li class="list-group-item d-flex justify-content-between">
             <div>
@@ -14,3 +16,10 @@
 </ul>
 <a href="/novo" class="btn btn-primary">Novo Curso</a>
 <?php include 'footer.php' ?>
+
+
+<!-- <select>
+<?php // foreach($data as $curso): ?>
+            <option value="<? //= $curso->getId() ?>"><? //= $curso->getDescricao() ?></option>  
+        <?php // endforeach; ?>
+</select> -->

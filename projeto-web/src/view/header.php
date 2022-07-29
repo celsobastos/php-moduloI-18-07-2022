@@ -20,10 +20,10 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand text-white" href="#">IMPACTA</a>
+                <a class="navbar-brand text-white" href="#">IMPACTA | <?= isset($_SESSION['email']) ? $_SESSION['email'] : '' ?></a>
             </div>
 
-            <a href="#" class="btn btn-primary bg-black">Logout</a>
+            <a href="/login" class="btn btn-primary">Fazer Login</a>
         </div>
     </nav>
     <main class="container shadow p-4 p-md-5 mb-4 rounded bg-light text-black">
