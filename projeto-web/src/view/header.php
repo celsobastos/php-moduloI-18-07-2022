@@ -27,6 +27,6 @@
         </div>
     </nav>
     <main class="container shadow p-4 p-md-5 mb-4 rounded bg-light text-black">
-        <h1 class="display-4 fst-italic"></h1>
+        <h1 class="display-4 fst-italic"><?= $titulo ?></h1>
     </main>
     <section class="container">
