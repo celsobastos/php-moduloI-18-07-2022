@@ -3,7 +3,7 @@
 namespace Impacta\Cursos\Controller;
 use Impacta\Cursos\Repositorio\CursosRepositorio;
 
-class InserirCurso extends RenderHTML {
+class UpdateCurso extends RenderHTML {
 
     public function requisicao() :void {
 
@@ -13,7 +13,8 @@ class InserirCurso extends RenderHTML {
         }
 
         $descricao = $_POST['descricao'];
-        if((new CursosRepositorio())->inserir($descricao)) {
+        $id = $_GET['id'];
+        if((new CursosRepositorio())->update($id, $descricao)) {
             header('Location: /cursos');
         }
     }

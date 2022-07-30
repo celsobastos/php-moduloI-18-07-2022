@@ -33,6 +33,12 @@ class CursosRepositorio {
         return $insert ? true : false;
     }
 
+    public function update(int $id, string $descricao) : bool {
+        $sql = "UPDATE cursos set descricao = '$descricao' WHERE id = '$id'";
+        $insert = \mysqli_query($this->connect, $sql);
+        return $insert ? true : false;
+    }
+
     public function deletar(int $id) : bool {
         $sql = "DELETE FROM cursos where id = '$id'";
         $delete = \mysqli_query($this->connect, $sql);

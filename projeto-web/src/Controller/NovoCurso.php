@@ -12,19 +12,17 @@ final class NovoCurso extends RenderHTML {
             header('Location: /login');
             die;
         }
-
-        $id = filter_var(
-            !isset($_GET['id']) ?? '',
-            FILTER_VALIDATE_INT
-        );
-
-        if(!$id) {
-            echo 'Erro digite um id valido';
-            die;
+        if ($this->validate($_GET['id'] ?? '')) {      
+            $curso = (array) (new CursosRepositorio())->getCurso($_GET['id']);
         }
 
-        $curso = (new CursosRepositorio())->getCurso($id);
-        $this->render('novo-curso', [$curso], 'Novo Curso');
+        $this->render('novo-curso', $curso ?? [], 'Novo Curso');
     }
 
+    private function validate(string $id): bool {
+        return filter_var(
+            $id,
+            FILTER_VALIDATE_INT
+        );
+    }
 }
