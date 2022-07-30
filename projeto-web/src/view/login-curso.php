@@ -1,4 +1,11 @@
 <?php include 'header.php' ?>
+
+<?php if (isset($_SESSION['mensagem'])): ?>
+  <div class="alert alert-danger">
+      <?= $_SESSION['mensagem'] ?>
+  </div>
+<?php endif; ?>
+
 <form action="/logar" method="POST">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>

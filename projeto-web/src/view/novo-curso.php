@@ -1,5 +1,6 @@
 <?php include 'header.php' ?> 
-<form action="/inserir-curso" method="POST">
+
+<form action="<?= isset($_GET['id']) ? '/update-curso' : '/inserir-curso' ?>" method="POST">
   <div class="form-group">
     <label for="curso"></label>
     <input type="text" name="descricao" class="form-control" id="curso" placeholder="Novo Curso">

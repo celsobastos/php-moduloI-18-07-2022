@@ -8,8 +8,8 @@
                 <?= $curso->getDescricao() ?>
             </div>
             <div>
-                <a href="#" class="btn btn-danger">Delete</a>
-                <a href="#" class="btn btn-success">Update</a>
+                <a href="/deletar?id=<?= $curso->getId() ?>" class="btn btn-danger">Delete</a>
+                <a href="/novo?id=<?= $curso->getId() ?>" class="btn btn-success">Update</a>
             </div>
         </li>
     <?php endforeach; ?>    

@@ -6,6 +6,8 @@ use Impacta\Cursos\Controller\{
     InserirCurso,
     LoginCurso,
     Logar,
+    Logout,
+    DeletarCurso,
 };
 
 return [
@@ -14,4 +16,6 @@ return [
     '/inserir-curso' => InserirCurso::class,
     '/login' => LoginCurso::class,
     '/logar' => Logar::class,
+    '/logout' => Logout::class,
+    '/deletar' => DeletarCurso::class,
 ];

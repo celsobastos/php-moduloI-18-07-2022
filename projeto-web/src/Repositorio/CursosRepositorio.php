@@ -11,7 +11,7 @@ class CursosRepositorio {
     public function __construct() {
         $this->connect = CreatorConnect::creatorConnect();
     }
-
+    
     public function listarCursos() : array {
         $sql = 'SELECT * FROM cursos';
         $cursos = \mysqli_query($this->connect, $sql);
@@ -31,5 +31,17 @@ class CursosRepositorio {
         $sql = "INSERT INTO cursos (descricao, status) VALUES ('$descricao', '1')";
         $insert = \mysqli_query($this->connect, $sql);
         return $insert ? true : false;
+    }
+
+    public function deletar(int $id) : bool {
+        $sql = "DELETE FROM cursos where id = '$id'";
+        $delete = \mysqli_query($this->connect, $sql);
+        return $delete ? true : false;
+    }
+
+    public function getCurso(int $id) {
+        $sql = "SELECT descricao FROM cursos where id = '$id';";
+        $curso = \mysqli_query($this->connect, $sql);
+        return mysqli_fetch_object($curso) ?? false;
     }
 }

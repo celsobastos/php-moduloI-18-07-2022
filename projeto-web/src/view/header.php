@@ -12,9 +12,8 @@
     <title>Cursos Impacta</title>
 </head>
 
-<body>
+<body style="background-color:<?= isset($_COOKIE['color']) ? $_COOKIE['color'] : '' ?>">
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -22,8 +21,11 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <a class="navbar-brand text-white" href="#">IMPACTA | <?= isset($_SESSION['email']) ? $_SESSION['email'] : '' ?></a>
             </div>
-
-            <a href="/login" class="btn btn-primary">Fazer Login</a>
+            <?php if(isset($_SESSION['logado'])): ?>
+                <a href="/logout" class="btn btn-primary bg-black">logout</a>
+            <?php else: ?>
+                <a href="/login" class="btn btn-primary">Fazer Login</a>
+            <?php endif; ?>
         </div>
     </nav>
     <main class="container shadow p-4 p-md-5 mb-4 rounded bg-light text-black">
